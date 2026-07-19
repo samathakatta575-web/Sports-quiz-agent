@@ -1,8 +1,7 @@
 import streamlit as st
 import random
 import json
-import os
-from dotenv import load_dotenv
+
 
 # Gemini (Optional)
 try:
@@ -25,9 +24,9 @@ st.write("Generate AI Sports Quiz using Google Gemini")
 # -----------------------------
 # LOAD API KEY
 # -----------------------------
-load_dotenv()
 
-API_KEY = os.getenv("GOOGLE_API_KEY")
+
+API_KEY = st.secrets["GOOGLE_API_KEY"]
 
 model = None
 
